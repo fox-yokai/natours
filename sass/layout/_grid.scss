@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
     margin: 0 auto; // centers block elements: top margin is 0, left and right is auto
 
     // selects everything but the last row and adds the margin-bottom
@@ -11,7 +10,6 @@
     @include clearfix;
 
     [class^="col-"] {
-        background-color: orangered;
         float: left;
 
         &:not(:last-child) {
