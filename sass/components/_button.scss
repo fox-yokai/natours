@@ -1,4 +1,5 @@
 .btn {
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -9,6 +10,10 @@
         transition: all .2s; /* needs to be on the initial element */
         position: relative; /* this is set so that the btn::after works */
         font-size: $default-font-size;
+
+        // Change for the button element
+        border: none;
+        cursor: pointer;
     }
     
     &:hover {
