@@ -8,11 +8,13 @@
     background-size: cover;
     background-position: top;
     position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* adds the notch in the image */
 
 
     // 600/16 = 37.5 em, 2000/16 = 125em
     @media  (min-resolution: 192dpi) and (min-width: 37.5em),
+            (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em),
             (min-width: 125em) {
         background-image: linear-gradient(
             to right bottom, 
@@ -22,6 +24,7 @@
     }
 
     @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     }
 }
